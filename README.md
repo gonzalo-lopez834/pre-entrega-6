@@ -97,7 +97,23 @@ Para ver el flujo paso a paso, también se puede abrir `notebooks/demo.ipynb`.
 ## Resultados
 
 - **Pruebas offline:** `python -m pytest -q` → `20 passed`. Cubren las herramientas, los guardarraíles y tres escenarios del grafo con un LLM simulado: camino feliz (supervisor → investigador → supervisor → analista → supervisor → síntesis), un supervisor terco que pide siempre al investigador (termina igual por los topes) y un `FINISH` prematuro que se rechaza.
-- **Corrida real con Gemini:** _pendiente de completar_. Ejecutá `python -m src.main` y pegá aquí el contenido de `logs/last_run.md` (la traza de delegación).
+- **Corrida real con Gemini** (`python -m src.main`, modelo `gemini-3.5-flash-lite`, 2026-11-15). La traza completa está en [`logs/last_run.md`](logs/last_run.md).
+
+  Ruta de delegación: `supervisor → researcher → supervisor → analyst → supervisor → synthesizer` (3 decisiones, sin refinamientos).
+
+  | Decisión | Nodo elegido | Resultado |
+  |---|---|---|
+  | 1 | `researcher` | Recuperó los 15 documentos de la base (6 LangGraph, 5 CrewAI, 4 AutoGen) con id de fuente, cita textual y rating. |
+  | 2 | `analyst` | Calculó rating y sentimiento por framework con sus herramientas (tabla siguiente). |
+  | 3 | `synthesizer` | El supervisor validó los 5 criterios de la rúbrica y se redactó la respuesta final. |
+
+  | Framework | Documentos | Rating promedio | Sentimiento promedio | Distribución (pos / neutro / neg) |
+  |---|---|---|---|---|
+  | LangGraph | 6 | 4.333 | 0.444 | 5 / 0 / 1 |
+  | CrewAI | 5 | 3.2 | 0.133 | 2 / 1 / 2 |
+  | AutoGen | 4 | 3.25 | 0.125 | 2 / 0 / 2 |
+
+  Conclusión del orquestador: **LangGraph** tiene la mejor recepción. Limitación reportada: la muestra es pequeña y ficticia (`data/knowledge_base.json`), por lo que es una tendencia ilustrativa y no un estudio.
 
 ## Checklist de la consigna
 
