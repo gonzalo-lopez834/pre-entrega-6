@@ -1,0 +1,17 @@
+[
+  {"id": "kb-01", "entity": "LangGraph", "source": "Community forum (sample)", "rating": 5, "text": "LangGraph gives excellent control over agent flows. Explicit state and conditional edges make the behaviour easy to debug and very reliable."},
+  {"id": "kb-02", "entity": "LangGraph", "source": "Community forum (sample)", "rating": 4, "text": "Muy potente y flexible para orquestar agentes. La curva de aprendizaje es algo dificil al principio, pero la documentacion ayuda."},
+  {"id": "kb-03", "entity": "LangGraph", "source": "Engineering blog (sample)", "rating": 5, "text": "Persistence, human-in-the-loop and streaming are great out of the box. I recommend it for production workloads."},
+  {"id": "kb-04", "entity": "LangGraph", "source": "Community forum (sample)", "rating": 3, "text": "The API is verbose and confusing for simple cases. For a quick prototype it feels complex."},
+  {"id": "kb-05", "entity": "LangGraph", "source": "Engineering blog (sample)", "rating": 4, "text": "Estable y robusto; el estado tipado evita muchos errores. Buen soporte para depurar cada nodo."},
+  {"id": "kb-06", "entity": "LangGraph", "source": "Community forum (sample)", "rating": 5, "text": "Best choice when you need deterministic routing between agents. Fast to iterate once you know the concepts."},
+  {"id": "kb-07", "entity": "CrewAI", "source": "Community forum (sample)", "rating": 4, "text": "CrewAI is easy and intuitive: roles and tasks map naturally to a team. Great for quick prototypes."},
+  {"id": "kb-08", "entity": "CrewAI", "source": "Engineering blog (sample)", "rating": 3, "text": "Facil de empezar, pero el control fino del flujo es limitado y a veces resulta dificil depurar."},
+  {"id": "kb-09", "entity": "CrewAI", "source": "Community forum (sample)", "rating": 2, "text": "Agents sometimes loop and the behaviour is hard to predict. Not reliable enough for my production use case."},
+  {"id": "kb-10", "entity": "CrewAI", "source": "Engineering blog (sample)", "rating": 4, "text": "Muy bueno para equipos de agentes con roles claros. La comunidad es activa y los ejemplos son utiles."},
+  {"id": "kb-11", "entity": "CrewAI", "source": "Community forum (sample)", "rating": 3, "text": "Good idea, but the abstraction hides too much and debugging is slow."},
+  {"id": "kb-12", "entity": "AutoGen", "source": "Community forum (sample)", "rating": 4, "text": "AutoGen shines for conversational multi-agent patterns. Flexible and powerful, with a strong research community."},
+  {"id": "kb-13", "entity": "AutoGen", "source": "Engineering blog (sample)", "rating": 2, "text": "La configuracion es compleja y la API cambio mucho entre versiones; resulto confuso y fragil."},
+  {"id": "kb-14", "entity": "AutoGen", "source": "Community forum (sample)", "rating": 3, "text": "Great for experiments but the conversations are expensive and hard to control. Production readiness is lacking."},
+  {"id": "kb-15", "entity": "AutoGen", "source": "Community forum (sample)", "rating": 4, "text": "Excelente para prototipar conversaciones entre agentes; muy flexible y con buenos ejemplos."}
+]

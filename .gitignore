@@ -1,0 +1,12 @@
+.venv/
+venv/
+.env
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+Thumbs.db
+checkpoints.db
+.ipynb_checkpoints/
+.pytest_cache/
+.atl/
