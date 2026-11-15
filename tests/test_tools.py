@@ -21,6 +21,13 @@ def test_search_returns_only_matching_entity_first() -> None:
     assert all(doc["entity"] == "LangGraph" for doc in results)
 
 
+def test_default_search_covers_every_document_of_an_entity() -> None:
+    results = json.loads(search_knowledge_base.invoke({"query": "LangGraph opinions"}))
+    langgraph_ids = {d["id"] for d in load_knowledge_base() if d["entity"] == "LangGraph"}
+    assert langgraph_ids <= {d["id"] for d in results}
+    assert len(langgraph_ids) == 6
+
+
 def test_search_is_accent_insensitive() -> None:
     docs = rank_documents("dificil", load_knowledge_base(), 5)
     assert docs and all("dificil" in d["text"].lower() or "difícil" in d["text"].lower() for d in docs)

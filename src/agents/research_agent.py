@@ -19,6 +19,8 @@ Rules:
 - Run one search per entity or sub-topic (e.g. one query per framework) to get balanced coverage.
 - Report findings as a bullet list. Each bullet MUST include: entity, source id (e.g. kb-03),
   the verbatim quote, and any numeric data (e.g. rating).
+- Copy every quote exactly as returned by the tool, character by character: never fix,
+  merge or rephrase words. Include ALL documents returned for each entity, none omitted.
 - Report only what the tools returned. If a search finds nothing, say so explicitly.
 - Answer in the same language as the task."""
 

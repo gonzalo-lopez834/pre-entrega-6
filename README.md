@@ -61,7 +61,7 @@ El mismo diagrama está en `docs/graph.mmd` (fuente) y `docs/graph.png`. Se rege
 | `src/graph.py` | Construcción del `StateGraph`, estado inicial y exportación del diagrama. |
 | `src/main.py` | CLI: ejecuta el flujo, imprime la traza de delegación y la guarda en `logs/last_run.md`. |
 | `data/knowledge_base.json` | Base de conocimiento de **muestra** (opiniones ficticias sobre LangGraph, CrewAI y AutoGen). |
-| `tests/` | 19 pruebas offline, incluido el flujo completo con un LLM simulado. |
+| `tests/` | 20 pruebas offline, incluido el flujo completo con un LLM simulado. |
 | `notebooks/demo.ipynb` | Demo del flujo de delegación. |
 
 ## Stack
@@ -96,7 +96,7 @@ Para ver el flujo paso a paso, también se puede abrir `notebooks/demo.ipynb`.
 
 ## Resultados
 
-- **Pruebas offline:** `python -m pytest -q` → `19 passed`. Cubren las herramientas, los guardarraíles y tres escenarios del grafo con un LLM simulado: camino feliz (supervisor → investigador → supervisor → analista → supervisor → síntesis), un supervisor terco que pide siempre al investigador (termina igual por los topes) y un `FINISH` prematuro que se rechaza.
+- **Pruebas offline:** `python -m pytest -q` → `20 passed`. Cubren las herramientas, los guardarraíles y tres escenarios del grafo con un LLM simulado: camino feliz (supervisor → investigador → supervisor → analista → supervisor → síntesis), un supervisor terco que pide siempre al investigador (termina igual por los topes) y un `FINISH` prematuro que se rechaza.
 - **Corrida real con Gemini:** _pendiente de completar_. Ejecutá `python -m src.main` y pegá aquí el contenido de `logs/last_run.md` (la traza de delegación).
 
 ## Checklist de la consigna

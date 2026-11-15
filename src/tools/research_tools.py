@@ -51,10 +51,11 @@ def rank_documents(query: str, documents: tuple[dict[str, Any], ...], top_k: int
 
 
 @tool
-def search_knowledge_base(query: str, top_k: int = 5) -> str:
+def search_knowledge_base(query: str, top_k: int = 10) -> str:
     """Search the local knowledge base of community opinions about agent frameworks.
 
     Use one query per entity (e.g. "LangGraph opinions") to get balanced results.
+    Returns up to ``top_k`` (default 10, max 10) documents, so one query covers an entity.
     Returns a JSON list of documents with id, entity, source, rating (1-5) and text.
     """
     results = rank_documents(query, load_knowledge_base(), max(1, min(top_k, 10)))
